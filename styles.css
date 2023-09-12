@@ -1,0 +1,52 @@
+body {
+  font-family: "Borel", cursive;
+  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  width: 50%;
+  margin: 50px auto;
+  padding: 40px 40px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: left;
+  color: black;
+  padding: 20px 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  font-size: 18px;
+  text-align: left;
+  opacity: 0.8;
+  font-weight: normal;
+  padding-left: 8px;
+}
+.units {
+  font-size: 15px;
+  position: relative;
+  top: -17px;
+}
+.sun-icon {
+  font-size: 40px;
+}
+.sun-sm-icon {
+  font-size: 20px;
+}
+.mb-3 {
+  margin-top: 30px;
+}
+.weekdays {
+  text-align: center;
+  font-size: 15px;
+}
+.coder {
+  text-align: center;
+}
+.searchbar {
+  margin-bottom: 10px;
+}
