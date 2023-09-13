@@ -32,102 +32,104 @@
   </head>
   <body>
     <div class="container" id="city-search">
-      <form class="searchbar">
+      <div class="weather-app">
+        <form class="searchbar">
+          <div class="row">
+            <div class="col-8">
+              <input
+                type="search"
+                class="form-control"
+                placeholder="Enter a city"
+                autofocus
+                id="city-input"
+              />
+            </div>
+            <div class="col-2">
+              <input
+                type="submit"
+                class="btn btn-primary form-control"
+                value="Search"
+              />
+            </div>
+            <div class="col-2">
+              <input
+                type="submit"
+                class="btn btn-success form-control"
+                value="Current"
+                id="current-location-button"
+              />
+            </div>
+          </div>
+        </form>
         <div class="row">
-          <div class="col-8">
-            <input
-              type="search"
-              class="form-control"
-              placeholder="Enter a city"
-              autofocus
-              id="city-input"
-            />
+          <div class="col">
+            <h1><span id="city"></span>, <span id="country"></span></h1>
+            <ul>
+              <li id="current-time"></li>
+              <li id="description"></li>
+            </ul>
           </div>
-          <div class="col-2">
-            <input
-              type="submit"
-              class="btn btn-primary form-control"
-              value="Search"
-            />
-          </div>
-          <div class="col-2">
-            <input
-              type="submit"
-              class="btn btn-success form-control"
-              value="Current"
-              id="current-location-button"
-            />
+          <div class="col">
+            <h1>
+              <i class="fa-solid fa-sun sun-icon"></i>
+              <span id="temperature"></span>
+              <span class="units"
+                ><a href="#" id="celsius-link">°C</a> |
+                <a href="#" id="fahrenheit-link">°F</a></span
+              >
+            </h1>
+            <ul>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind-speed"></span> km/h</li>
+            </ul>
           </div>
         </div>
-      </form>
-      <div class="row">
-        <div class="col">
-          <h1><span id="city"></span>, <span id="country"></span></h1>
-          <ul>
-            <li id="current-time"></li>
-            <li id="description"></li>
-          </ul>
-        </div>
-        <div class="col">
-          <h1>
-            <i class="fa-solid fa-sun sun-icon"></i>
-            <span id="temperature"></span>
-            <span class="units"
-              ><a href="#" id="celsius-link">°C</a> |
-              <a href="#" id="fahrenheit-link">°F</a></span
-            >
-          </h1>
-          <ul>
-            <li>Humidity: <span id="humidity"></span>%</li>
-            <li>Wind: <span id="wind-speed"></span> km/h</li>
-          </ul>
+        <hr />
+        <div class="row weekdays">
+          <div class="col">
+            Thu <br />
+            <i class="fa-solid fa-sun fa-beat sun-sm-icon"></i>
+            <br />
+            37°
+          </div>
+          <div class="col">
+            Fri <br />
+            <i class="fa-solid fa-sun fa-beat sun-sm-icon"></i> <br />
+            38°
+          </div>
+          <div class="col">
+            Sat <br />
+            <i class="fa-solid fa-sun fa-beat sun-sm-icon"></i><br />
+            37°
+          </div>
+          <div class="col">
+            Sun <br />
+            <i class="fa-solid fa-sun fa-beat sun-sm-icon"></i><br />
+            37°
+          </div>
+          <div class="col">
+            Mon <br /><i class="fa-solid fa-cloud-sun fa-beat sun-sm-icon"></i
+            ><br />
+            36°
+          </div>
+          <div class="col">
+            Tue <br />
+            <i class="fa-solid fa-cloud fa-beat sun-sm-icon"></i><br />
+            35°
+          </div>
+          <div class="col">
+            Wed <br />
+            <i class="fa-solid fa-sun fa-beat sun-sm-icon"></i><br />
+            37°
+          </div>
         </div>
       </div>
-      <hr />
-      <div class="row weekdays">
-        <div class="col">
-          Thu <br />
-          <i class="fa-solid fa-sun fa-beat sun-sm-icon"></i>
-          <br />
-          37°
-        </div>
-        <div class="col">
-          Fri <br />
-          <i class="fa-solid fa-sun fa-beat sun-sm-icon"></i> <br />
-          38°
-        </div>
-        <div class="col">
-          Sat <br />
-          <i class="fa-solid fa-sun fa-beat sun-sm-icon"></i><br />
-          37°
-        </div>
-        <div class="col">
-          Sun <br />
-          <i class="fa-solid fa-sun fa-beat sun-sm-icon"></i><br />
-          37°
-        </div>
-        <div class="col">
-          Mon <br /><i class="fa-solid fa-cloud-sun fa-beat sun-sm-icon"></i
-          ><br />
-          36°
-        </div>
-        <div class="col">
-          Tue <br />
-          <i class="fa-solid fa-cloud fa-beat sun-sm-icon"></i><br />
-          35°
-        </div>
-        <div class="col">
-          Wed <br />
-          <i class="fa-solid fa-sun fa-beat sun-sm-icon"></i><br />
-          37°
-        </div>
-      </div>
+      <footer>
+        <a href="https://github.com/tnajp/weather-app" target="_blank"
+          >Open-source code</a
+        >, by Tina Javidipour
+      </footer>
     </div>
-    <footer>
-      <a href="https://github.com/tnajp/weather-app" target="_blank"
-        >Open-source code</a
-      >, by Tina Javidipour
-    </footer>
     <script src="script.js"></script>
   </body>
 </html>
