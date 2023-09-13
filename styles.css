@@ -9,6 +9,7 @@ body {
   margin: 50px auto;
   padding: 40px 40px;
   border-radius: 10px;
+  margin-bottom: 0%;
 }
 
 h1 {
@@ -49,4 +50,9 @@ ul {
 }
 .searchbar {
   margin-bottom: 10px;
+}
+footer {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 5px;
 }
