@@ -10,6 +10,7 @@ body {
   padding: 40px 40px;
   border-radius: 10px;
   margin-bottom: 0%;
+  border: 1px;
 }
 
 h1 {
@@ -18,14 +19,19 @@ h1 {
   padding: 20px 0;
   margin: 0;
 }
+
 ul {
-  list-style: none;
   margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
   font-size: 18px;
   text-align: left;
   opacity: 0.8;
   font-weight: normal;
   padding-left: 8px;
+  text-transform: capitalize;
 }
 .units {
   font-size: 15px;
