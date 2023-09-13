@@ -22,6 +22,7 @@ function formatDate(date) {
 }
 let dayntime = document.querySelector("#current-time");
 dayntime.innerHTML = formatDate(currentTime);
+
 function changeToCelsius(event) {
   event.preventDefault();
   let modifiedTemp = document.querySelector("#temperature");
@@ -53,6 +54,12 @@ function showWeather(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 ///
 function searchCity(city) {
