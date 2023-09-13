@@ -3,7 +3,7 @@ body {
   font-family: "Nunito", sans-serif;
   font-family: "Roboto", sans-serif;
 }
-.container {
+.weather-app {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   width: 50%;
   margin: 50px auto;
@@ -17,7 +17,8 @@ h1 {
   text-align: left;
   color: black;
   padding: 20px 0;
-  margin: 0;
+  margin-bottom: 0;
+  font-size: 27px;
 }
 
 ul {
@@ -34,9 +35,9 @@ li {
   text-transform: capitalize;
 }
 .units {
-  font-size: 15px;
+  font-size: 14px;
   position: relative;
-  top: -17px;
+  top: -9px;
 }
 .sun-icon {
   font-size: 40px;
@@ -55,4 +56,19 @@ footer {
   font-size: 13px;
   text-align: center;
   margin-top: 5px;
+}
+.weather-temperature img {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: -10px;
+}
+#temperature {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: normal;
+  color: black;
+  position: relative;
+  top: 10px;
+  left: -5px;
 }
