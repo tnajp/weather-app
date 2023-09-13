@@ -62,22 +62,31 @@
           </div>
         </form>
         <div class="row">
-          <div class="col">
-            <h1><span id="city"></span>, <span id="country"></span></h1>
+          <div class="col-6">
+            <h1>
+              <span id="city"></span>
+              <div id="country"></div>
+            </h1>
+          </div>
+          <div class="col-6">
+            <div class="weather-temperature">
+              <img src="#" alt="" id="icon" />
+              <span id="temperature"></span
+              ><span class="units"
+                ><a href="#" id="celsius-link">°C</a> |
+                <a href="#" id="fahrenheit-link">°F</a></span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
             <ul>
               <li id="current-time"></li>
               <li id="description"></li>
             </ul>
           </div>
-          <div class="col">
-            <h1>
-              <i class="fa-solid fa-sun sun-icon"></i>
-              <span id="temperature"></span>
-              <span class="units"
-                ><a href="#" id="celsius-link">°C</a> |
-                <a href="#" id="fahrenheit-link">°F</a></span
-              >
-            </h1>
+          <div class="col-6">
             <ul>
               <li>Humidity: <span id="humidity"></span>%</li>
               <li>Wind: <span id="wind-speed"></span> km/h</li>
