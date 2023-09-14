@@ -23,31 +23,35 @@ function formatDate(date) {
 let dayntime = document.querySelector("#current-time");
 dayntime.innerHTML = formatDate(currentTime);
 
-function changeToCelsius(event) {
-  event.preventDefault();
-  let modifiedTemp = document.querySelector("#temperature");
-  modifiedTemp.innerHTML = 19;
-}
-let celsius = document.querySelector("#celsius-link");
-celsius.addEventListener("click", changeToCelsius);
-
 function changeToFahrenheit(event) {
   event.preventDefault();
-  let modifiedTemp = document.querySelector("#temperature");
-  let temperature = modifiedTemp.innerHTML;
-  temperature = Number(temperature);
-  modifiedTemp.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  let temperatureElement = document.querySelector("#temperature");
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", changeToFahrenheit);
+
+function changeToCelsius(event) {
+  event.preventDefault();
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+let celsius = document.querySelector("#celsius-link");
+celsius.addEventListener("click", changeToCelsius);
+let celsiusTemperature = null;
 //new
 function showWeather(response) {
   console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#country").innerHTML = response.data.sys.country;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celsiusTemperature = response.data.main.temp;
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celsiusTemperature);
   document.querySelector("#wind-speed").innerHTML = Math.round(
     response.data.wind.speed
   );
