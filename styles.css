@@ -56,9 +56,9 @@ footer {
 .sun-sm-icon {
   font-size: 20px;
 }
-.weekdays {
+.forecast {
   text-align: center;
-  font-size: 15px;
+  color: rgba(245, 245, 245, 0.863);
 }
 .searchbar {
   margin-bottom: 10px;
@@ -95,4 +95,13 @@ footer {
 #current-location-button {
   border: 1px solid rgba(1, 35, 83, 0.897);
   color: rgba(1, 35, 83, 0.897);
+}
+.forecast-date {
+  font-size: 15px;
+}
+.forecast-temp {
+  font-size: 13px;
+}
+.forecast-temp-min {
+  opacity: 0.7;
 }
