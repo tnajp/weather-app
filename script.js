@@ -1,5 +1,9 @@
-let currentTime = new Date();
-function formatDate(date) {
+function formatDate(timestamp, timezone = null) {
+  let localtime = new Date(timestamp);
+  let offset = localtime.getTimezoneOffset();
+  let date1 = new Date(localtime);
+  date1.setSeconds(date1.getSeconds() + timezone);
+  let date = new Date(date1.getTime() + offset * 60 * 1000);
   let days = [
     "Sunday",
     "Monday",
@@ -9,19 +13,17 @@ function formatDate(date) {
     "Friday",
     "Saturday",
   ];
-  let day = days[currentTime.getDay()];
-  let hour = currentTime.getHours();
+  let day = days[date.getDay()];
+  let hour = date.getHours();
   if (hour < 10) {
     hour = `0${hour}`;
   }
-  let minutes = currentTime.getMinutes();
+  let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
   return `${day}  ${hour}:${minutes}`;
 }
-let dayntime = document.querySelector("#current-time");
-dayntime.innerHTML = formatDate(currentTime);
 
 function changeToFahrenheit(event) {
   event.preventDefault();
@@ -64,6 +66,10 @@ function showWeather(response) {
       "src",
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+  document.querySelector("#date").innerHTML = formatDate(
+    response.data.dt * 1000,
+    response.data.timezone
+  );
 }
 ///
 function searchCity(city) {
