@@ -46,7 +46,7 @@ function displayForecast(response) {
                 }@2x.png"
                 alt=""
                 id=""
-                width="50"
+                width="63"
               />
               <div class="forecast-temp">
                 <span class="forecast-temp-max"> ${Math.round(
