@@ -52,6 +52,8 @@ footer {
 }
 .searchbar {
   margin-bottom: 10px;
+  padding-right: 17.5px;
+  text-align: center;
 }
 .weather-temperature img {
   margin: 0;
@@ -85,9 +87,14 @@ footer {
   border: 1px solid rgba(1, 35, 83, 0.897);
 }
 #current-location-button {
-  font-weight: 500;
-  border: 1px solid rgba(1, 35, 83, 0.897);
-  color: rgba(1, 35, 83, 0.897);
+  font-size: 25px;
+  border: 2px solid rgba(1, 35, 83, 0.76);
+  color: rgba(1, 35, 83, 0.808);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 38px;
 }
 #current-location-button:hover {
   background-color: transparent;
