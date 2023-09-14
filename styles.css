@@ -4,11 +4,9 @@ body {
   font-family: "Roboto", sans-serif;
 }
 .weather-app {
-  background: linear-gradient(
-    109.6deg,
-    rgb(156, 252, 248) 11.2%,
-    rgb(110, 123, 251) 91.1%
-  );
+  background-image: url("images/alessio-soggetti-PdGBci-4jR8-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
   width: 50%;
   margin: 100px auto;
   padding: 40px 40px;
@@ -38,6 +36,7 @@ li {
   font-weight: normal;
   padding-left: 8px;
   text-transform: capitalize;
+  color: black;
 }
 footer {
   font-size: 13px;
@@ -88,4 +87,12 @@ footer {
 .weather-temperature .active {
   color: black;
   cursor: default;
+}
+#search-button {
+  background-color: rgba(1, 35, 83, 0.897);
+  border: 1px solid rgba(1, 35, 83, 0.897);
+}
+#current-location-button {
+  border: 1px solid rgba(1, 35, 83, 0.897);
+  color: rgba(1, 35, 83, 0.897);
 }
