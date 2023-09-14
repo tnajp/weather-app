@@ -18,6 +18,7 @@ h1 {
   color: black;
   padding: 20px 0;
   margin-bottom: 0;
+  margin-left: 5px;
   font-size: 27px;
 }
 
@@ -35,9 +36,10 @@ li {
   text-transform: capitalize;
 }
 .units {
-  font-size: 14px;
+  font-size: 15px;
   position: relative;
   top: -9px;
+  left: -5px;
 }
 .sun-icon {
   font-size: 40px;
@@ -71,4 +73,14 @@ footer {
   position: relative;
   top: 10px;
   left: -5px;
+}
+#celsius-link {
+  text-decoration: none;
+}
+#fahrenheit-link {
+  text-decoration: none;
+}
+.weather-temperature .active {
+  color: black;
+  cursor: default;
 }
