@@ -24,6 +24,31 @@ function formatDate(timestamp, timezone = null) {
   }
   return `${day}  ${hour}:${minutes}`;
 }
+function displayForecast(params) {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+              <div class="forecast-date">${day}</div>
+              <img
+                src="https://openweathermap.org/img/wn/50d@2x.png"
+                alt=""
+                id=""
+                width="50"
+              />
+              <div class="forecast-temp">
+                <span class="forecast-temp-max"> 37° </span>-
+                <span class="forecast-temp-min">37°</span>
+              </div>
+          </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function changeToFahrenheit(event) {
   event.preventDefault();
@@ -99,3 +124,4 @@ function getCurrentLocation(event) {
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 searchCity("New York");
+displayForecast();
