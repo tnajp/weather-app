@@ -4,9 +4,13 @@ body {
   font-family: "Roboto", sans-serif;
 }
 .weather-app {
-  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  background: linear-gradient(
+    109.6deg,
+    rgb(156, 252, 248) 11.2%,
+    rgb(110, 123, 251) 91.1%
+  );
   width: 50%;
-  margin: 50px auto;
+  margin: 100px auto;
   padding: 40px 40px;
   border-radius: 10px;
   margin-bottom: 0%;
@@ -35,6 +39,12 @@ li {
   padding-left: 8px;
   text-transform: capitalize;
 }
+footer {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 5px;
+  color: rgba(39, 37, 37, 0.671);
+}
 .units {
   font-size: 15px;
   position: relative;
@@ -53,11 +63,6 @@ li {
 }
 .searchbar {
   margin-bottom: 10px;
-}
-footer {
-  font-size: 13px;
-  text-align: center;
-  margin-top: 5px;
 }
 .weather-temperature img {
   margin: 0;
