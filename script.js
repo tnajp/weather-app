@@ -98,6 +98,8 @@ function showWeather(response) {
   celsiusTemperature = response.data.main.temp;
   document.querySelector("#temperature").innerHTML =
     Math.round(celsiusTemperature);
+  fahrenheit.classList.remove("active");
+  celsius.classList.add("active");
   document.querySelector("#wind-speed").innerHTML = Math.round(
     response.data.wind.speed
   );
